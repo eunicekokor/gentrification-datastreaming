@@ -24,7 +24,7 @@ The objective was originally to get historical 311 Complaints to understand the 
 ### What we learned from `311.py` Redis Inputs
 1) There are 188 neighborhoods in new york with a lot of housing complaints in the past 5 years
 
-Using & Searching through a demographic document: <LINK>
+Using & Searching through a demographic document on changes during a decade: http://www.urbanresearchmaps.org/plurality/
 2) The highest # of complaints per neighborhood per person for the most part usually come out of areas with higher Black & Latino populations
 3) The lowest # of complaints per neighborhood per person for the most part usually come out of areas with higher Black & Latino populations
 4) For neighborhoods with significant demographic change from 2000 to 2010 (highest percentage changes of Black/White/Asian/Latino) there were no specific spectrum of how those
