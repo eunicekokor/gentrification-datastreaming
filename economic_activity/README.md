@@ -62,6 +62,7 @@ fsq_nongent_during_twoyears.csv
 
 We used d3.js to plot the changes to compare how they differ between intervals of gentrification vs non-gentrification.
 See results in /changes_results/plots
+The amount of user-generated Foursquare data is generally higher for non-gentrification instances compared to their gentrification-interval counterparts. When we used increases in housing prices to identify neighborhoods that gentrified in each time interval, we filtered out neighborhoods that had median housing prices above the median (relative to all NYC neighborhoods) at the start of the time interval. We suspect that users generate more Foursquare data in non-gentrifying neighborhoods such as tourist destinations (Midtown where Times Square is located, Chelsea, Flatiron tech offices, etc). Hence, we come ot the conclusion that an increase in Foursquare activity in a particular neighborhood is an indicator of that neighborhood being frequented more, but not necessarily an indicator of gentrification.
 
 
 Streaming Tweet Distributions
