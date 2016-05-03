@@ -4,7 +4,6 @@ List of Repositories Used:
 - [Finding & Tracking Gentrification Using Methods That Were Defined](#gent) https://github.com/samnnodim/nyc-housing
 - [Foursquare and Twitter Stream analyzing](#fsquare)
 
-311 Complaints Fetching
 
 <a name="1234">NYC 311 Complaints</a>
 ================================
