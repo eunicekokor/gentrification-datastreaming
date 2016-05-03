@@ -8,10 +8,30 @@ Foursquare and Twitter Stream analyzing
 
 <a name="1234">NYC 311 Complaints</a>
 ================================
+
+Uses the NYC 311-Service-Requests-from-2010-to-Present API to get the number of complaints for all of New York City. Creates a Redis store full of NYC Complaint Data. It also uses a Flask app also that returns data on periods of gentrification & complaint information. Charted with pygal, external library. Link: http://www.pygal.org/en/latest/documentation/types/line.html.
+
 ## File Overviews
 Comparing periods of gentrification to our stats of how many complaints per neighborhood occured in various time periods from 2010-2015
 
-Uses the NYC 311-Service-Requests-from-2010-to-Present API to get the number of complaints for all of New York City. Creates a Redis store full of NYC Complaint Data. It also uses a Flask app also that returns data on periods of gentrification & complaint information. Charted with pygal, external library. Link: http://www.pygal.org/en/latest/documentation/types/line.html.
+### Python Files
+#### `311.py`
+This gets historical and realtime 311 complaints and adds it to a Redis store. We only run this once.
+#### `server.py`
+This displays gentrifying periods as well as neighborhood 311 complaints, through a span of five years using Flask as a server and Pygal to display graphs.
+### Static Files
+#### `population.json`
+This gets historical and realtime 311 complaints and adds it to a Redis store.
+#### `threemonths.txt`
+Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
+#### `sixmonths.txt`
+Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
+#### `oneyear.txt`
+Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
+#### `twoyears.txt`
+Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
+#### `zillow_to_docp_mapping.json`
+Our neighborhood names were not a 1-1 match from `query_mongo.py` (based on Zillow neighborhood definitions to the standardized neighborhood names) so we created our own mapping that included neighborhoods we missed. 
 
 ## Analysis
 ### The Objective of `311.py`
@@ -50,24 +70,6 @@ Because we have the ability to look at whatever list of neighborhoods we want an
 2) Neighborhoods that have gentrified have different complaint counts per person than neighborhoods that have not gentrified.
 
 
-### Python Files
-#### `311.py`
-This gets historical and realtime 311 complaints and adds it to a Redis store. We only run this once.
-#### `server.py`
-This displays gentrifying periods as well as neighborhood 311 complaints, through a span of five years using Flask as a server and Pygal to display graphs.
-### Static Files
-#### `population.json`
-This gets historical and realtime 311 complaints and adds it to a Redis store.
-#### `threemonths.txt`
-Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
-#### `sixmonths.txt`
-Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
-#### `oneyear.txt`
-Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
-#### `twoyears.txt`
-Gentrification intervals for neighborhoods based off of NYC Housing data drawn from `query_mongo.py`
-#### `zillow_to_docp_mapping.json`
-Our neighborhood names were not a 1-1 match from `query_mongo.py` (based on Zillow neighborhood definitions to the standardized neighborhood names) so we created our own mapping that included neighborhoods we missed. 
 
 ### Usage w/ Complete Installation Instructions
 
